@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+<div class="container">
+  <form class="inside">
+  <img decoding="async" src="./images/logo.svg" alt="" srcset="">
+  <main class="main">
+    <div class="even-columns">
+      <div class="top">
+        <div class="flex">
+          <p class="bill">Bill</p>
+          <p class="blank right">Can't be blank</p>
+        </div>
+        <div class="number-box">
+          <img src="./images/icon-dollar.svg" decoding="async" alt="dolar icon">
+          <input type="number" min="1" name="" oninput="this.value=(parseInt(this.value) || 0)" maxlength="6" autocomplete="none" id="bill" placeholder="0">
+        </div>
+      </div>
+      <div class="mid">
+        <p>Select Tip %</p>
+        <div class="grid-boxes">
+          <button type="button" class="button" data-percent>5%</button>
+          <button type="button" class="button" data-percent>10%</button>
+          <button type="button" class="button" data-percent>15%</button>
+          <button type="button" class="button" data-percent>25%</button>
+          <button type="button" class="button" data-percent>50%</button>
+          <input type="number" autocomplete="none" maxlength="3" placeholder="Custom" id="custom">
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="flex">
+          <p>Number of People</p>
+          <p class="blank">Can't be blank</p>
+        </div>
+        <div class="number-box two">
+          <img src="./images/icon-person.svg" alt="" srcset="">
+            <input type="number" min="1" oninput="this.value=(parseInt(this.value) || 0)" autocomplete="none" placeholder="0" id="number">
+        </div>
+      </div>
+    </div>
+    <div class="even-columns">
+      <div class="upper">
+        <div class="tip">
+          <p>Tip Amount</p>
+          <small>/ person</small>
+        </div>
+        <h3 class="amount">$0.00</h3>
+      </div>
+      <div class="bot">
+        <div class="total">
+          <p>Total</p>
+          <small>/ person</small>
+        </div>
+        <h3 class="total-amount">$0.00</h3>
+      </div>
+      <div class="bot">
+        <div class="total">
+          <p>Total</p>
+          <small>/ full</small>
+        </div>
+        <h3 class="final">$0.00</h3>
+      </div>
+      <button type="reset" class="reset disabled">RESET</button>
+    </div>
+  </main>
+  </form>
+</div>
+</body>
+</html>
